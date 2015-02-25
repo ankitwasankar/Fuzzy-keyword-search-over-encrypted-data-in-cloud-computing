@@ -7,6 +7,6 @@ http://www.mytechblog.in/fuzzy-keyword-search-over-encrypted-data-in-cloud-compu
 
 Link to video demostartion:
 
-https://www.youtube.com/user/AnkitWasankar/videos
+http://www.youtube.com/playlist?list=PL3hpmQhMoz-cb5GPUsJQHxwzSuIx94VK9
 
 
