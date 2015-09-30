@@ -15,11 +15,15 @@ Since the cloud is not trusted, the data should be stored in an encrypted form a
 * N-Grams generation
 * jaccard coefficient calculation
 
+###EKS live demo available at:
+* http://github.mytechblog.in/EKS/
+
 ######Link to detailed explaination:
 * http://www.mytechblog.in/fuzzy-keyword-search-over-encrypted-data-in-cloud-computing-project/
 
 ######Link to video demonstration:
 * https://www.youtube.com/watch?v=cfFj4Fgszbw
 * https://www.youtube.com/watch?v=WsKnsjma1cg
+
 
 
