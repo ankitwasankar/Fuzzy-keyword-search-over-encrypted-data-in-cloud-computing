@@ -151,9 +151,9 @@ class User extends CI_Controller {
 				
 			}
 			
-			$this->load->view('admin/header/header',$data);
-			$this->load->view('admin/dashboard',$data);
-			$this->load->view('admin/footer/footer',$data);
+			$this->load->view('user/header/header',$data);
+			$this->load->view('user/dashboard',$data);
+			$this->load->view('user/footer/footer',$data);
 		}	
 		
 	/*************************************************
