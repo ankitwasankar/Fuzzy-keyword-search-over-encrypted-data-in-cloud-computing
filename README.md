@@ -15,6 +15,13 @@ Since the cloud is not trusted, the data should be stored in an encrypted form a
 * N-Grams generation
 * jaccard coefficient calculation
 
+###Useful Credentials:
+* username: ankit.wasankar12@gmail.com
+* password: 1234567890
+* admin-username: admin
+* admin-password: 1234567890
+ 
+
 ###EKS live demo available at:
 * http://github.mytechblog.in/EKS/
 
