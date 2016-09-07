@@ -23,7 +23,7 @@ class Admin extends CI_Controller {
 			$this->load->model('file_keys');
 			$this->load->model('index_x');
 			/***********  delete all tmp files *******************/
-			$files = glob('assets/tmp/*'); // get all file names
+			$files = glob(TEMP_FILE_LOCATION.'*'); // get all file names
 			foreach($files as $file){ // iterate files
 			  if(is_file($file))
 				unlink($file); // delete file
@@ -60,7 +60,7 @@ class Admin extends CI_Controller {
 				$enm=rand(1000000,100000000000);	
 				$enm=md5($enm);
 				
-				$path1="assets/files/".$enm;	
+				$path1=ORG_FILE_LOCATION.$enm;	
 				
 				$fh = fopen($image, 'rb'); // handle for file from form
 				$fh1 = fopen($path1,'wb'); // handle for encrypted file on server
@@ -167,7 +167,7 @@ class Admin extends CI_Controller {
 			/** deleting file from server **************/
 			$row=Upl_files::get_finfo_by_fid($fid);
 			$filename=$row[0]->f_loc;  //encrypted filename  on server
-			$target_path="assets/files/".$filename;
+			$target_path=ORG_FILE_LOCATION.$filename;
 			if(file_exists($target_path)) {
 				chmod($target_path,0755); //Change the file permissions if allowed read and write
 				unlink($target_path); //remove the file
@@ -284,9 +284,9 @@ class Admin extends CI_Controller {
 	**************************************************/
 		public function download($fid){
 			$row=Upl_files::get_finfo_by_fid($fid);
-			$original_filename="assets/files/".$row[0]->f_loc;
+			$original_filename=ORG_FILE_LOCATION.$row[0]->f_loc;
 			$ext=$row[0]->f_ext;
-			$new_filename="assets/tmp/file_".rand(100,1000000).".".$ext;
+			$new_filename=TEMP_FILE_LOCATION."file_".rand(100,1000000).".".$ext;
 				
 			/*****************decoding file to $newfilename *********************/
 			$fp2=fopen($new_filename,'wb');

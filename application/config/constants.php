@@ -1,6 +1,15 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /*
+| Custom setting for application
+| These are location constants used for storing files on server's filesystem
+| TEMP_FILE_LOCATION - temporary storage location for download link to generate (must end with fwd slash /)
+| ORG_FILE_LOCATION - original file location of file on server (must end with fwd slash /)
+|*/
+define('TEMP_FILE_LOCATION','assets/tmp/');
+define('ORG_FILE_LOCATION','assets/files/');
+
+/*
 |--------------------------------------------------------------------------
 | File and Directory Modes
 |--------------------------------------------------------------------------
