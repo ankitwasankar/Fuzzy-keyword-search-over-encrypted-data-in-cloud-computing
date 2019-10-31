@@ -26,7 +26,7 @@ Since the cloud is not trusted, the data should be stored in an encrypted form a
 * http://github.mytechblog.in/EKS/
 
 ######Link to detailed explaination:
-* http://www.mytechblog.in/fuzzy-keyword-search-over-encrypted-data-in-cloud-computing-project/
+* https://tutorials.webencyclop.com/blog/fuzzy-keyword-search-over-encrypted-data-in-cloud-computing-project/
 
 ######Link to video demonstration:
 * https://www.youtube.com/watch?v=cfFj4Fgszbw
