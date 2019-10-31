@@ -23,7 +23,7 @@ Since the cloud is not trusted, the data should be stored in an encrypted form a
  
 
 ###EKS live demo available at:
-* http://github.mytechblog.in/EKS/
+* Sorry, I'm currently working on providing the live demo.
 
 ######Link to detailed explaination:
 * https://tutorials.webencyclop.com/blog/fuzzy-keyword-search-over-encrypted-data-in-cloud-computing-project/
