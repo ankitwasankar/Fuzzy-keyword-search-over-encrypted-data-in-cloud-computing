@@ -12,11 +12,11 @@
 				<table>
 					<tr>
 						<td>Username * 
-						<td><input type="text" name="username" id="username" value="<?php echo set_value('username'); ?>" class="text_box">
+						<td><input type="text" name="username" id="username" value="admin" class="text_box">
 						</tr>		
 						<tr>
 						<td>Password *
-						<td><input type="password" size="16" name="password" id="password" class="text_box"\>
+						<td><input type="password" size="16" name="password" value="1234567890" id="password" class="text_box"\>
 						</tr>	
 						<tr>
 						<td>

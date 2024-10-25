@@ -13,11 +13,11 @@
 				<table>
 					<tr>
 						<td>Username * 
-						<td><input type="email" name="username" id="username" value="ankit.wasankar12@gmail.com" class="text_box">
+						<td><input type="email" name="username" id="username" class="text_box">
 						</tr>		
 						<tr>
 						<td>Password *
-						<td><input type="password" size="16" name="password" value="1234567890" id="password" class="text_box"\>
+						<td><input type="password" size="16" name="password" id="password" class="text_box"\>
 						</tr>	
 						<tr>
 						<td>Confirm password * 
@@ -68,11 +68,11 @@
 				<table>
 					<tr>
 						<td>Username * 
-						<td><input type="email" name="username" id="username" value="<?php echo set_value('username'); ?>" class="text_box">
+						<td><input type="email" name="username" id="username" value="ankit.wasankar12@gmail.com" class="text_box">
 						</tr>		
 						<tr>
 						<td>Password *
-						<td><input type="password" size="16" name="password" id="password" class="text_box"\>
+						<td><input type="password" size="16" name="password" value="1234567890" id="password" class="text_box"\>
 						</tr>	
 						<tr>
 						<td>
