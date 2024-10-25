@@ -1,7 +1,6 @@
 # EKS
 Source code for Fuzzy keyword search over encrypted data in cloud computing | PHP project
-
-https://tutorials.webencyclop.com/blog/fuzzy-keyword-search-over-encrypted-data-in-cloud-computing-project/
+https://ankitwasankar.medium.com/fuzzy-keyword-search-over-encrypted-data-in-cloud-computing-ffe0154e7811
 
 ### Synopsis
 EKS is a Academic Project for Fuzzy keyword search over encrypted data in cloud computing.
@@ -28,7 +27,7 @@ Since the cloud is not trusted, the data should be stored in an encrypted form a
 * site not accessible currently [please contact for more details: Telegram: Ankit.Wasankar] https://t.me/AnkitWasankar
 
 ### Link to detailed explaination:
-* https://tutorials.webencyclop.com/blog/fuzzy-keyword-search-over-encrypted-data-in-cloud-computing-project/
+[* https://tutorials.webencyclop.com/blog/fuzzy-keyword-search-over-encrypted-data-in-cloud-computing-project/](https://ankitwasankar.medium.com/fuzzy-keyword-search-over-encrypted-data-in-cloud-computing-ffe0154e7811)
 
 ### Link to video demonstration:
 * https://www.youtube.com/watch?v=cfFj4Fgszbw
