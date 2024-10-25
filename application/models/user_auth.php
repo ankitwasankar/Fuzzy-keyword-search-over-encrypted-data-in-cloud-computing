@@ -63,7 +63,7 @@
 		public function users($fid){
 			$query="select * from user_auth".$fid;
 			$records=$this->db->query($query);
-			return User_auth::instantiate($records);
+			return (new User_auth())->instantiate($records);
 		}
 		
 		public function update_pass($username,$pass){
@@ -144,13 +144,13 @@
 			$uid=$this->session->userdata('userid');
 			$query="select * from user_auth".$fid." where u_id=$uid;";
 			$records=$this->db->query($query);
-			return User_auth::instantiate($records);			
+			return (new User_auth())->instantiate($records);			
 		}
 		
 		public function get_user_info($fid,$uid){
 			$query="select * from user_auth".$fid." where u_id=$uid;";
 			$records=$this->db->query($query);
-			return User_auth::instantiate($records);			
+			return (new User_auth())->instantiate($records);			
 		}
 		public function delete_acc($fid){
 			$uid=$this->session->userdata('userid');

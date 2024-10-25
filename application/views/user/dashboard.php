@@ -59,15 +59,19 @@
 					<td>delete
 				</thead>
 			<?php 
-				$uid=$this->session->userdata('userid');
-				$records=Upl_files::get_finfo_by_uid($uid); 
+				$uid = $this->session->userdata('userid');
+				// Create an instance of the Upl_files class
+				$upl_files_instance = new Upl_files();
+
+				// Call the non-static method on the instance
+				$records = $upl_files_instance->get_finfo_by_uid($uid);  
 				$i=1; 
 				foreach($records as $row){ 
 			?>	
 				<tr>
 					<td style="width:70px;"><?php echo $i++; ?>
 					<td style="width:450px;"><?php echo "<a href='".base_url()."user/download/".$row->f_id."'>".base64_decode($row->f_title)."</a>"; ?>  <!--<?php// echo $row->f_title; ?>-->
-					<td><?php echo gmdate("d-M-Y",time($row->f_date)); ?> <!-- time converts time to unix timestamp -->
+					<td><?php echo gmdate("d-M-Y", strtotime($row->f_date)); ?>
 					<td><?php $url=base_url()."user/delete"; echo "<a href='".$url."/$row->f_id'>Delete</a>" ?>
 				</tr>
 			<?php } ?>

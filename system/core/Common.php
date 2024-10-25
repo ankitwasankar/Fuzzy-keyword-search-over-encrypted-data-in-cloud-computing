@@ -254,7 +254,8 @@ if ( ! function_exists('get_config'))
 			}
 		}
 
-		return $_config[0] =& $config;
+		$_config[0] = $config;
+		return $_config[0];
 	}
 }
 
@@ -346,7 +347,7 @@ if ( ! function_exists('show_404'))
 */
 if ( ! function_exists('log_message'))
 {
-	function log_message($level = 'error', $message, $php_error = FALSE)
+	function log_message($message, $level = 'error', $php_error = FALSE)
 	{
 		static $_log;
 

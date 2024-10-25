@@ -77,13 +77,13 @@ class Ngram{
 			/* check if all required tables are available or not */
 			for($i=0;$i<$len;$i++){
 				$tbl_name="index_".$i;
-				if(!Index_x::check_table($tbl_name)){ //check if table exists or not
-					Index_x::create_table($tbl_name); // create table if not exists
+				if(!(new Index_x())->check_table($tbl_name)){ //check if table exists or not
+					(new Index_x())->create_table($tbl_name); // create table if not exists
 				}
 			}
 			$i=0;
 			foreach($ngrams as $row){
-				Index_x::insert_data($row,$key,$i);
+				(new Index_x())->insert_data($row,$key,$i);
 				$i++;
 			}
 		}

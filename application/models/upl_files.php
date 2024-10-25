@@ -45,26 +45,26 @@
 		public function get_finfo($loc){
 			$query="select * from upl_files where f_loc='$loc';";
 			$records=$this->db->query($query);
-			return Upl_files::instantiate($records);
+			return (new Upl_files())->instantiate($records);
 		}
 		
 		public function get_finfo_by_fid($fid){
 			$query="select * from upl_files where f_id=$fid;";
 			$records=$this->db->query($query);
-			return Upl_files::instantiate($records);
+			return (new Upl_files())->instantiate($records);
 		}
 			
 		
 		public function get_finfo_by_uid($uid){
 			$query="select * from upl_files where f_u_id=$uid;";
 			$records=$this->db->query($query);
-			return Upl_files::instantiate($records);
+			return (new Upl_files())->instantiate($records);
 		}
 		
 		public function delete_file($fid){
 			$query="select * from upl_files where f_id=$fid;";
 			$records=$this->db->query($query);
-			$objs=Upl_files::instantiate($records);
+			$objs= (new Upl_files())->instantiate($records);
 			$query="delete from upl_files where f_id=$fid;";
 			if($this->db->query($query)){
 				return true;

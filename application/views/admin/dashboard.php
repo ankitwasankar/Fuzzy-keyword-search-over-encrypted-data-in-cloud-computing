@@ -59,14 +59,14 @@
 				</thead>
 			<?php 
 				$uid=$this->session->userdata('userid');
-				$records=Upl_files::get_finfo_by_uid($uid); 
+				$records=(new Upl_files())->get_finfo_by_uid($uid); 
 				$i=1; 
 				foreach($records as $row){ 
 			?>	
 				<tr>
 					<td style="width:70px;"><?php echo $i++; ?>
 					<td style="width:450px;"><?php echo base64_decode($row->f_title); ?>  <!--<?php// echo $row->f_title; ?>-->
-					<td><?php echo gmdate("d-M-Y",time($row->f_date)); ?> <!-- time converts time to unix timestamp -->
+					<td><?php echo gmdate("d-M-Y", strtotime($row->f_date)); ?>
 					<td><?php $url=base_url()."admin/delete"; echo "<a href='".$url."/$row->f_id'>Delete</a>" ?>
 				</tr>
 			<?php } ?>

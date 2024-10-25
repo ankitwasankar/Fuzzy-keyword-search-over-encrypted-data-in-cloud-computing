@@ -16,7 +16,7 @@
 				$o=new Index_x();
 				
 				$o->ngram_key=$row->ngram_key;
-				$o->org_key=base64_decode($row->org_key);
+				$o->org_key=$row->org_key;
 				
 				
 				$obj[$i]=$o;
@@ -38,22 +38,22 @@
 			$time=$endtime - $starttime;
 			$this->session->set_userdata(array('time'=>$time));
 			if($records!=NULL){
-				return Index_x::instantiate($records);
+				return (new Index_x())->instantiate($records);
 			}
 			else{
 				return NULL;
 			}
 		}
 		
-		public function check_table($tb){
-			$query="select 1 from $tb"; // fastest working query to check if table exist or not http://stackoverflow.com/questions/6432178/how-can-i-check-if-a-mysql-table-exists-with-php
-			
-			if($this->db->query($query)){
-				return true;
+		public function check_table($tb) {
+			$query = "SELECT 1 FROM $tb"; // Fastest working query to check if table exists
+
+			try {
+				$this->db->query($query);
+				return true; // Table exists
+			} catch (Exception $e) {
+				return false; // Table does not exist
 			}
-			else{
-				return false;
-			}	
 		}
 		
 		public function create_table($tb){

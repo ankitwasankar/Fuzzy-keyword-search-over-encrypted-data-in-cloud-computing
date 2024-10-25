@@ -25,15 +25,7 @@
 		public function add_keys($finfo,$arr){
 			$fid=$finfo[0]->f_id;
 			foreach($arr as $row){	
-				$row=strtolower($row);
-				/*	
-					-- Encrypting to aes --
-						$key = 'xbYtKK'
-						$blockSize = 256
-						$mode = MCRYPT_MODE_ECB
-				*/
-				$aes = new AES($row);
-				$row = $aes->encrypt();
+				$row = base64_encode($row);
 				$query="insert into file_keys values($fid,'$row');";	
 				$this->db->query($query);
 			}
@@ -41,11 +33,16 @@
 		}
 		
 		public function get_fid_by_key($key){
-			$aes = new AES($key);
-			$key = $aes->encrypt();
+			$key = base64_encode($key);
 			$query="select * from file_keys where `key`='$key';";
 			$records=$this->db->query($query);
-			return File_keys::instantiate($records);
+			return (new File_keys())->instantiate($records);
+		}
+		
+		public function get_fid_by_org_key($key){
+			$query="select * from file_keys where `key`='$key';";
+			$records=$this->db->query($query);
+			return (new File_keys())->instantiate($records);
 		}
 	}	
 ?>

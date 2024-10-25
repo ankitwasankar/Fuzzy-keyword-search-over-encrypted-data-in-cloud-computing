@@ -25,7 +25,7 @@
 		<?php
 			$i=1;
 			foreach($f_array as $row){
-				$record=Upl_files::get_finfo_by_fid($row);
+				$record=(new Upl_files())->get_finfo_by_fid($row);
 		?>	
 			<tr>
 				<td style="width:70px;"><?php echo $i; $i++;?>
